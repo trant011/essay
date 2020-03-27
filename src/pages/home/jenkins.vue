@@ -9,7 +9,7 @@
 				  style="width: 100%">
 				  <el-table-column
 				    prop="date"
-				    label="cicd,webhook配置"
+				    label="cicd,webhook配置:"
 				    width="600">
 				  </el-table-column>
 				 
