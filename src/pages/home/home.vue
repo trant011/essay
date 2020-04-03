@@ -66,6 +66,11 @@
 								<span>sqlcode</span>
 							</el-menu-item>
 							
+							<el-menu-item index="/apitest" style="padding-left: 40px;">
+								<i class="el-icon-picture-outline-round"></i>
+								<span>apitest</span>
+							</el-menu-item>
+							
 			<el-menu-item style="padding-left: 40px; "> 
 						<i class="el-icon-files"></i>
 									<span>grafana</span>

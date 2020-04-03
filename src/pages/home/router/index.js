@@ -9,6 +9,7 @@ import socketio from '../socketio.vue'
 import airtest from '../airtest.vue'
 import jenkins from '../jenkins.vue'
 import sqlcode from '../sqlcode.vue'
+import apitest from '../apitest.vue'
 import axios from 'axios'
 import { codemirror } from 'vue-codemirror'
 import 'codemirror/lib/codemirror.css'
@@ -69,7 +70,11 @@ const routes = [
     name: 'sqlcode',
     component: sqlcode
   },
-
+  {
+    path: '/apitest',
+    name: 'apitest',
+    component: apitest
+  },
   // {
   //   path: '/about',
   //   name: 'about',
