@@ -11,7 +11,7 @@
 	
 			<el-container style='height:50rem;'>
 
-				<el-aside width="200px" style="background-color: rgb(238, 241, 246);  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);">
+				<el-aside  style="background-color: rgb(238, 241, 246);  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);width: 11%;">
 					<el-menu  class="el-menu-vertical-demo"  @open="handleOpen"
       @close="handleClose" default-active='menu1'  :default-active="this.$route.path" router>
 						<el-submenu index="1">
@@ -24,66 +24,72 @@
 								<!-- <template slot="title">分组一</template> -->
 									 <el-menu-item-group>
 
-								<el-menu-item index="/menu1" style="padding-left: 40px; ">
+								<el-menu-item index="/menu1" style="padding-left: 20%; ">
 									<i class="el-icon-files"></i>
 									<span>docker</span>
 									</el-menu-item>
 							
-							<el-menu-item index="/menu2" style="padding-left: 40px;">
+							<el-menu-item index="/menu2" style="padding-left: 20%;">
 								<i class='el-icon-arrow-down'></i>
 								<span>vue</span>
 								</el-menu-item>
-							<el-menu-item index="/menu3" style="padding-left: 40px;">
+							<el-menu-item index="/menu3" style="padding-left: 20%;">
 								<i class="el-icon-data-analysis"></i>
 								<span>构造数据</span>
 								</el-menu-item>
-<el-menu-item index="/menu4" style="padding-left: 40px;">
+<el-menu-item index="/menu4" style="padding-left: 20%;">
 	<i class="el-icon-eleme"></i>
 	<span>ele-ui</span>
 	</el-menu-item>
-<el-menu-item index="/socketio" style="padding-left: 40px;">
+<el-menu-item index="/socketio" style="padding-left: 20%;">
 	<i class="el-icon-paperclip"></i>
 	<span>socketio</span>
 	</el-menu-item>
 	</el-menu-item-group>
 						</el-submenu>
-						
+						<el-menu-item index="/selenium" style="padding-left: 20%;">
+							<i class="el-icon-orange"></i>
+							<span>selenium</span>
+							</el-menu-item>
+							</el-menu-item-group>
+												</el-submenu>
+												
 						<el-submenu index="2">
 							<template slot="title">
 								<i class="el-icon-s-tools"></i>
 								<span >一些工具</span>
 								</template>
-							<el-menu-item index="/airtest" style="padding-left: 45px;">
+							<el-menu-item index="/airtest" style="padding-left: 23%;">
 								<i class="airtest"></i>
 								<span style="padding-left: 10px;">airtest</span>
 							</el-menu-item>
-							<el-menu-item index="/jenkins" style="padding-left: 45px;">
+							<el-menu-item index="/jenkins" style="padding-left: 23%;">
 								<i class="jenkins"></i>
 								<span style="padding-left: 10px;">jenkins</span>
 							</el-menu-item>
-							<el-menu-item index="/sqlcode" style="padding-left: 40px;">
+							<el-menu-item index="/sqlcode" style="padding-left: 20%;">
 								<i class="el-icon-collection-tag"></i>
 								<span>sqlcode</span>
 							</el-menu-item>
 							
-							<el-menu-item index="/apitest" style="padding-left: 40px;">
+							<el-menu-item index="/apitest" style="padding-left: 20%;">
 								<i class="el-icon-picture-outline-round"></i>
 								<span>apitest</span>
 							</el-menu-item>
 							
-			<el-menu-item style="padding-left: 40px; "> 
+			<el-menu-item style="padding-left: 20%; "> 
 						<i class="el-icon-files"></i>
 									<span>grafana</span>
 			</el-menu-item>
 						
-							<el-menu-item  style="padding-left: 40px;">
+							<el-menu-item  style="padding-left: 20%;">
 								<i class='el-icon-arrow-down'></i>
 								<span>elk</span>
 							</el-menu-item>
-							<el-menu-item  style="padding-left: 40px;">
+							<el-menu-item  style="padding-left: 20%;">
 								<i class="el-icon-data-analysis"></i>
 								<span>jacoco</span>
-							</el-menu-item>
+							</el-menu-item >
 					
 						</el-submenu>
 				</el-menu>

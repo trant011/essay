@@ -79,6 +79,8 @@
 			      // autofocus: true,
 			      // extraKeys: { Ctrl: 'autocomplete' }, // 自定义快捷键
 			      hintOptions: {
+			      	　// 当匹配只有一项的时候是否自动补全
+　　　　　　　　　　　　completeSingle: false,
 			        // 自定义提示选项
 			        tables: {
 			          users: ['name', 'score', 'birthDate'],

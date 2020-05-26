@@ -10,6 +10,7 @@ import airtest from '../airtest.vue'
 import jenkins from '../jenkins.vue'
 import sqlcode from '../sqlcode.vue'
 import apitest from '../apitest.vue'
+import selenium from '../selenium.vue'
 import axios from 'axios'
 import { codemirror } from 'vue-codemirror'
 import 'codemirror/lib/codemirror.css'
@@ -74,6 +75,11 @@ const routes = [
     path: '/apitest',
     name: 'apitest',
     component: apitest
+  },
+  {
+    path: '/selenium',
+    name: 'selenium',
+    component: selenium
   },
   // {
   //   path: '/about',

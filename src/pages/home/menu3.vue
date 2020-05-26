@@ -447,7 +447,7 @@
 			channels = this.getCookie('channel');
 
 			if (ads) {
-				console.log('dsad', ads)
+				// console.log('dsad', ads)
 				this.ad0 = ads;
 
 				this.refesh1('ad', this.ad0);

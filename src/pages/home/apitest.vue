@@ -7,8 +7,8 @@
 		<p style="font-size: 18px;color: #606266;" >冒烟测试</p>
 		<div v-for="dic in data">
 			<div style="margin: 0.3125rem;">
-			<el-input v-model="dic.url" placeholder="url" style="width: 60%;" ></el-input>
-			<el-select v-model="dic.value"   style="width: 6.25rem;margin-left: 0.625rem;">
+			<el-input v-model="dic.url" placeholder="url" style="width: 70%;" ></el-input>
+			<el-select v-model="dic.value"   style="width: 15%;margin-left: 0.625rem;">
 			    <el-option
 			      v-for="item in dic.meth"
 			      :key="item.value"
@@ -18,7 +18,7 @@
 			  </el-select>
 		</div>
 		<div style="margin: 0.3125rem;">
-			<el-input v-model="dic.req" placeholder="请求数据"  style="width: 60%;"></el-input>
+			<el-input v-model="dic.req" placeholder="请求数据"  style="width: 70%;"></el-input>
 			<el-button type="primary" style="margin-left: 0.625rem;" @click="test(dic)">test</el-button>
 			<p v-for="res in dic.res" style="font: 1rem;color: #2C3E50;">{{res}}</p>
 			</div>
@@ -74,7 +74,7 @@
 		},
 		methods: {
 			test:function(data){
-				console.log(data.url,data.req);
+				// console.log(data.url,data.req);
 				data.res.push("{'ret': 0, 'msg': 'ok', 'data': []}");
 			}
 		}
