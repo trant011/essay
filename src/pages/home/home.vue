@@ -45,14 +45,14 @@
 	<i class="el-icon-paperclip"></i>
 	<span>socketio</span>
 	</el-menu-item>
+	<el-menu-item index="/selenium" style="padding-left: 20%;">
+		<i class="el-icon-orange"></i>
+		<span>selenium</span>
+		</el-menu-item>
+	
 	</el-menu-item-group>
 						</el-submenu>
-						<el-menu-item index="/selenium" style="padding-left: 20%;">
-							<i class="el-icon-orange"></i>
-							<span>selenium</span>
-							</el-menu-item>
-							</el-menu-item-group>
-												</el-submenu>
+					
 												
 						<el-submenu index="2">
 							<template slot="title">
