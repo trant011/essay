@@ -45,7 +45,7 @@ module.exports = {
 
 		//压缩
 		plugins.push(
-			//gzip压缩
+			//gzip压缩1
 			new CompressionWebpackPlugin({
 				filename: "[path].gz[query]",
 				algorithm: "gzip",
