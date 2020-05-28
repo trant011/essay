@@ -1,4 +1,4 @@
-
+const IS_PROD = ["production", "prod"].includes(process.env.NODE_ENV);
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 const productionGzipExtensions = /\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i;
 
@@ -39,21 +39,22 @@ module.exports = {
 	configureWebpack: config => {
 		const plugins = [];
 		//生产环境确认
-
-		//production版本console.log 打包时 自动注释
-		config.optimization.minimizer[0].options.terserOptions.compress.drop_console = true
-
-		//压缩
-		plugins.push(
-			//gzip压缩1
-			new CompressionWebpackPlugin({
-				filename: "[path].gz[query]",
-				algorithm: "gzip",
-				test: productionGzipExtensions,
-				threshold: 10240,
-				minRatio: 0.8
-			})
-		);
+		if (IS_PROD) {
+			//production版本console.log 打包时 自动注释
+			config.optimization.minimizer[0].options.terserOptions.compress.drop_console = true
+	
+			//压缩
+			plugins.push(
+				//gzip压缩
+				new CompressionWebpackPlugin({
+					filename: "[path].gz[query]",
+					algorithm: "gzip",
+					test: productionGzipExtensions,
+					threshold: 10240,
+					minRatio: 0.8
+				})
+			);
+		}
 		config.plugins = [...config.plugins, ...plugins];
 	},
 
