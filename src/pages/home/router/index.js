@@ -1,22 +1,33 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../home.vue'
-import menu1 from '../docker.vue'
-import menu2 from '../vue.vue'
-import menu3 from '../menu3.vue'
-import menu4 from '../eleui.vue'
-import socketio from '../socketio.vue'
-import airtest from '../airtest.vue'
-import jenkins from '../jenkins.vue'
-import sqlcode from '../sqlcode.vue'
-import apitest from '../apitest.vue'
-import selenium from '../selenium.vue'
+// import Home from '../home.vue'
+// import menu1 from '../docker.vue'
+// import menu2 from '../vue.vue'
+// import menu3 from '../menu3.vue'
+// import menu4 from '../eleui.vue'
+// import socketio from '../socketio.vue'
+// import airtest from '../airtest.vue'
+// import jenkins from '../jenkins.vue'
+// import sqlcode from '../sqlcode.vue'
+// import apitest from '../apitest.vue'
+// import selenium from '../selenium.vue'
 import axios from 'axios'
 import { codemirror } from 'vue-codemirror'
 import 'codemirror/lib/codemirror.css'
 
 Vue.use(VueRouter,axios,codemirror)
 
+const home = r => require.ensure([], () => r(require('../home.vue')), 'home')
+const docker = r => require.ensure([], () => r(require('../docker.vue')), 'docker')
+const menu2 = r => require.ensure([], () => r(require('../vue.vue')), 'menu2')
+const menu3 = r => require.ensure([], () => r(require('../menu3.vue')), 'menu3')
+const eleui = r => require.ensure([], () => r(require('../eleui.vue')), 'eleui')
+const socketio = r => require.ensure([], () => r(require('../socketio.vue')), 'socketio')
+const airtest = r => require.ensure([], () => r(require('../airtest.vue')), 'airtest')
+const jenkins = r => require.ensure([], () => r(require('../jenkins.vue')), 'jenkins')
+const sqlcode = r => require.ensure([], () => r(require('../sqlcode.vue')), 'sqlcode')
+const apitest = r => require.ensure([], () => r(require('../apitest.vue')), 'apitest')
+const selenium = r => require.ensure([], () => r(require('../selenium.vue')), 'selenium')
 const routes = [
 	
  //  {
@@ -32,9 +43,9 @@ const routes = [
     component: home
   },
   {
-    path: '/menu1',
-    name: 'menu1',
-    component: menu1
+    path: '/docker',
+    name: 'docker',
+    component: docker
   },
   {
     path: '/menu2',
@@ -47,9 +58,9 @@ const routes = [
     component: menu3
   },
   {
-    path: '/menu4',
-    name: 'menu4',
-    component: menu4
+    path: '/eleui',
+    name: 'eleui',
+    component: eleui
   },
   {
     path: '/socketio',

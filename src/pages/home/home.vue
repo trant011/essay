@@ -24,7 +24,7 @@
 								<!-- <template slot="title">分组一</template> -->
 									 <el-menu-item-group>
 
-								<el-menu-item index="/menu1" style="padding-left: 20%; ">
+								<el-menu-item index="/docker" style="padding-left: 20%; ">
 									<i class="el-icon-files"></i>
 									<span>docker</span>
 									</el-menu-item>
@@ -37,7 +37,7 @@
 								<i class="el-icon-data-analysis"></i>
 								<span>构造数据</span>
 								</el-menu-item>
-<el-menu-item index="/menu4" style="padding-left: 20%;">
+<el-menu-item index="/eleui" style="padding-left: 20%;">
 	<i class="el-icon-eleme"></i>
 	<span>ele-ui</span>
 	</el-menu-item>

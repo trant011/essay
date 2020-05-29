@@ -92,7 +92,7 @@
 			          if (valid) {
 						
 			            console.log( this.ruleForm);
-						window.location.href='home.html#/menu1';
+						window.location.href='home.html#/docker';
 						// window.location.href = "http://"+window.location.host+ "/home.html";
 			          } else {
 			            console.log('error submit!!');
