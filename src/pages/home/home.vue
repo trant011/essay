@@ -71,6 +71,10 @@
 								<i class="el-icon-collection-tag"></i>
 								<span>sqlcode</span>
 							</el-menu-item>
+							<el-menu-item index="/mysql" style="padding-left: 20%;">
+								<i class="el-icon-collection-tag"></i>
+								<span>mysql</span>
+							</el-menu-item>
 							
 							<el-menu-item index="/apitest" style="padding-left: 20%;">
 								<i class="el-icon-picture-outline-round"></i>
@@ -94,7 +98,7 @@
 						</el-submenu>
 				</el-menu>
 			</el-aside>
-			<router-view>
+			<router-view >
 			
 			</router-view>
 		</el-container>

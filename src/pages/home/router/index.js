@@ -28,6 +28,7 @@ const jenkins = r => require.ensure([], () => r(require('../jenkins.vue')), 'jen
 const sqlcode = r => require.ensure([], () => r(require('../sqlcode.vue')), 'sqlcode')
 const apitest = r => require.ensure([], () => r(require('../apitest.vue')), 'apitest')
 const selenium = r => require.ensure([], () => r(require('../selenium.vue')), 'selenium')
+const mysql = r => require.ensure([], () => r(require('../mysql.vue')), 'mysql')
 const routes = [
 	
  //  {
@@ -91,6 +92,11 @@ const routes = [
     path: '/selenium',
     name: 'selenium',
     component: selenium
+  },
+  {
+    path: '/mysql',
+    name: 'mysql',
+    component: mysql
   },
   // {
   //   path: '/about',

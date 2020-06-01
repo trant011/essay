@@ -53,7 +53,7 @@
 	      },
 	      methods: {
 	        convert: function () {
-				 axios.get('http://'+window.location.host+":8002/writtingdata").then(res => {
+				 axios.get('http://'+ window.location.host.replace(":8079","")+":8002/writtingdata").then(res => {
 				          this.text = res.data;
 				        })
 			}
