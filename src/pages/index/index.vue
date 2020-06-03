@@ -40,7 +40,7 @@
 			
    
     </div>
-     <span style="position:absolute;bottom:0;width:100%;height:100px;font-size:12px;color:#9bb5c9;    text-align:center;">Copyright@2020 版权所有 wuvvj.com,All Rights Reserved 
+     <span style="position:absolute;bottom:0;width:100%;height:50px;font-size:12px;color:#9bb5c9;    text-align:center;">Copyright@2020 版权所有 wuvvj.com,All Rights Reserved 
  <a  href="http://www.beian.miit.gov.cn/" target="_blank">沪ICP备19004266号-1 </a></span>
   </div>
 </template>

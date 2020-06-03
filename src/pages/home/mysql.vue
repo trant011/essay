@@ -2,7 +2,8 @@
 	<el-container>
 	<el-main style="background-color: rgb(241, 242, 247);" >
 <div id="home" style="margin-left: 1%;">
-	<div style="position: fixed; ">
+	
+	<div style="position: fixed;right: 20%; ">
 	    <el-steps direction="vertical" :active="activeStep" space="40px"
 	 finish-status="wait"
 	 >
@@ -25,7 +26,8 @@
 		  </el-step>
 		</el-steps>
 	</div>
-	<div  style="margin-left: 10%;">
+	
+	<div  style="margin-left: 1%;">
 		<div v-for="(item, index) in steps" :key="index" class="step-jump" style="margin-top: 3% ;" >
 			<p>{{item.title}}</p>
 		
@@ -52,12 +54,10 @@
 	</el-popconfirm>
 		
 		</div>
-	
-			
-		
-			</div>
-	
 	</div>
+	
+	
+</div>
 </el-main>
 </el-container>
 </template>
