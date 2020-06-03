@@ -47,8 +47,9 @@
 			  type="textarea"
 			  placeholder="请输入内容"
 			  v-model="item.data"
-			  maxlength="200"
+			  maxlength="300"
 			  show-word-limit
+			  :autosize="{ minRows: 2, maxRows: 10}"
 			   slot="reference">
 			   </el-input>
 	</el-popconfirm>
