@@ -6,6 +6,7 @@
 	<div style="position: fixed;right: 20%; ">
 	    <el-steps direction="vertical" :active="activeStep" space="40px"
 	 finish-status="wait"
+	 process-status="finish"
 	 >
 		  <el-step
 			v-for="(item, index) in steps"
@@ -13,7 +14,6 @@
 			:title="item.title"
 			@click.native="jump(index)"
 			icon=""
-			:background-color="index === activeStep ?  '#409EFF' : '#BEC0C2'" 
 			>
 			 
 	
