@@ -3,7 +3,7 @@
 	<el-main style="background-color: rgb(241, 242, 247);" >
 <div id="home" style="margin-left: 1%;">
 	
-	<div style="position: fixed;right: 20%; ">
+	<div style="position: fixed;left: 70%; ">
 	    <el-steps direction="vertical" :active="activeStep" space="40px"
 	 finish-status="wait"
 	 process-status="finish"

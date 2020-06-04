@@ -81,7 +81,7 @@
 								<span>apitest</span>
 							</el-menu-item>
 							
-			<el-menu-item style="padding-left: 20%; "> 
+	<!-- 		<el-menu-item style="padding-left: 20%; "> 
 						<i class="el-icon-files"></i>
 									<span>grafana</span>
 			</el-menu-item>
@@ -93,7 +93,7 @@
 							<el-menu-item  style="padding-left: 20%;">
 								<i class="el-icon-data-analysis"></i>
 								<span>jacoco</span>
-							</el-menu-item >
+							</el-menu-item > -->
 					
 						</el-submenu>
 				</el-menu>
