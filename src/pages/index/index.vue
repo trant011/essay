@@ -93,19 +93,19 @@
 			          if (valid) {
 
 						axios.get('http://'+window.location.host.replace(":8079","")+":8002/login/?username="+this.ruleForm.name+"&password="+this.ruleForm.pass).then(res => {
-						
 						let req = res.data;
-						if (req.code==0){
-							document.cookie="login="req.data;
-							window.location.href='home.html#/docker';  
+						if (req.code == 0 ){
+							document.cookie="login="+JSON.stringify(req.data);
+							window.location.href='home.html#/docker';   
 						}
-						  
+						 
 						      })
 							
 						// window.location.href='home.html#/docker';
 						// window.location.href = "http://"+window.location.host+ "/home.html";
 			          } else {
-			            console.log('error submit!!');
+			            
+						window.location.href='home.html#/docker'; 
 			            return false;
 			          }
 			        });
