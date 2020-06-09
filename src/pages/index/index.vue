@@ -93,9 +93,13 @@
 			          if (valid) {
 
 						axios.get('http://'+window.location.host.replace(":8079","")+":8002/login/?username="+this.ruleForm.name+"&password="+this.ruleForm.pass).then(res => {
-						let data = res.data.data;
-						 document.cookie=data.uid+"="+data.token;  
-						     window.location.href='home.html#/docker';   
+						
+						let req = res.data;
+						if (req.code==0){
+							document.cookie="login="req.data;
+							window.location.href='home.html#/docker';  
+						}
+						  
 						      })
 							
 						// window.location.href='home.html#/docker';
