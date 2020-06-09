@@ -50,7 +50,7 @@ module.exports = {
 					filename: "[path].gz[query]",
 					algorithm: "gzip",
 					test: productionGzipExtensions,
-					threshold: 10240,
+					threshold: 5240,
 					minRatio: 0.8
 				})
 			);

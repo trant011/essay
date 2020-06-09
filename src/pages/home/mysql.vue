@@ -108,7 +108,7 @@ created () {
 	},
 	submit(item){
 		let param ={"page":"mysql","pid":item.pid,"data":item.data,"title":item.title};
-		axios.post('http://'+window.location.host.replace(":8079","")+":8002/updatapage/", param).then(res => {
+		axios.post('http://'+window.location.host.replace(":8079","")+":8002/updatapage/", param,{ withCredentials:true}).then(res => {
 		console.log(res.data);
 		
 		      })
@@ -121,9 +121,11 @@ created () {
 	},
 	getpagedata(){
 			// var reg = new RegExp( "'" , "g" )
-		  axios.get('http://'+window.location.host.replace(":8079","")+":8002/getpage?page=mysql").then(res => {
-		  this.steps =JSON.parse(res.data).data;
-		  // this.steps = this.steps.data;
+		  axios.get('http://'+window.location.host.replace(":8079","")+":8002/getpage?page=mysql",{ withCredentials:true}).then(res => {
+			
+		  // this.steps =JSON.parse(res.data).data;
+		  this.steps = res.data.data;
+
 		  this.maxindex = this.steps.length+1;
 		  this.steph = this.maxindex*80;
 

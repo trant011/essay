@@ -46,6 +46,7 @@
 </template>
 
  <script>
+	 import axios from 'axios'
 	 export default {
 	     data() {
 			var checkName = (rule, value, callback) => {
@@ -90,9 +91,14 @@
 			      submitForm(formName) {
 			        this.$refs[formName].validate((valid) => {
 			          if (valid) {
-						
-			            console.log( this.ruleForm);
-						window.location.href='home.html#/docker';
+
+						axios.get('http://'+window.location.host.replace(":8079","")+":8002/login/?username="+this.ruleForm.name+"&password="+this.ruleForm.pass).then(res => {
+						let data = res.data.data;
+						 document.cookie=data.uid+"="+data.token;  
+						     window.location.href='home.html#/docker';   
+						      })
+							
+						// window.location.href='home.html#/docker';
 						// window.location.href = "http://"+window.location.host+ "/home.html";
 			          } else {
 			            console.log('error submit!!');
