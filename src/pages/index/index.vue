@@ -98,7 +98,9 @@
 							document.cookie="login="+JSON.stringify(req.data);
 							window.location.href='home.html#/docker';   
 						}
-						 
+						 else{
+							 window.location.href='home.html#/docker';   
+						 }
 						      })
 							
 						// window.location.href='home.html#/docker';

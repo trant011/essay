@@ -20,11 +20,34 @@
 		  </el-step>
 		  <el-step icon="el-icon-circle-plus-outline"
 		  :key="maxindex"
-		  @click.native="addtitle()"
+		  @click.native="dialogFormVisible = true"
 		  title="新增">
-			  
+			
 		  </el-step>
 		</el-steps>
+	</div>
+	
+	<div style="padding: 0px;">
+	<el-dialog title="新增标签" :visible.sync="dialogFormVisible">
+	  <el-form :model="form">
+	    <el-form-item label="标题" :label-width="formLabelWidth">
+	      <el-input v-model="form.name" autocomplete="off" style="width: 90%;"></el-input>
+	    </el-form-item>
+	    <el-form-item label="文本" :label-width="formLabelWidth" >
+	  <el-input v-model="form.text" autocomplete="off"  style="width: 90%;"
+	  type="textarea" 
+	  maxlength="300"
+		show-word-limit
+		:autosize="{ minRows: 2, maxRows: 10}"></el-input>
+	  
+	    </el-form-item>
+	  </el-form>
+	  <div slot="footer" class="dialog-footer">
+	    <el-button @click="dialogFormVisible = false">取 消</el-button>
+	    <el-button type="primary" @click="addtitle()">确 定</el-button>
+	  </div>
+	</el-dialog>
+	
 	</div>
 	
 	<div  style="margin-left: 1%;">
@@ -39,7 +62,7 @@
 		  iconColor="#409EFF"
 		  title="提交或者删除"
 		  @onConfirm="submit(item)"
-		  @onCancel="deltitle(item)"
+		  @onCancel="deltitle(item,index)"
 		>
 			
 			
@@ -74,7 +97,12 @@
 			activeStep:1,
 			steps:[],
 			steph:320,
-		
+		 dialogFormVisible: false,
+		        form: {
+		          name: '',
+		          text: '',
+		        },
+		        formLabelWidth: '120px',
             }
         },
 
@@ -113,11 +141,23 @@ created () {
 		
 		      })
 	},
-	deltitle(item){
-		console.log("deltitle",item);
+	deltitle(item,index){
+		let param ={"page":"mysql","pid":item.pid,"data":item.data,"title":item.title};
+		axios.post('http://'+window.location.host.replace(":8079","")+":8002/del/", param,{ withCredentials:true}).then(res => {
+		console.log(res.data);
+		this.steps.splice(index,1);
+		 })
 	},
 	addtitle(){
-		  console.log("add");
+		let param ={"page":"mysql","pid":this.maxindex,"data":this.form.text,"title":this.form.name};
+		axios.post('http://'+window.location.host.replace(":8079","")+":8002/addpage/", param,{ withCredentials:true}).then(res => {
+		let data = res.data
+		console.log(data);
+		this.steps.push(data.data);
+		this.dialogFormVisible = false
+		this.maxindex = this.maxindex+1;
+		      })
+		
 	},
 	getpagedata(){
 			// var reg = new RegExp( "'" , "g" )
@@ -192,4 +232,7 @@ created () {
 /* 	.el-textarea__inner {
 		background-color: #ccc;
 	} */
+	.el-dialog__body{
+		padding: 0px;
+	}
 </style>
