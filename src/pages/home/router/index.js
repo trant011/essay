@@ -30,6 +30,12 @@ const sqlcode = r => require.ensure([], () => r(require('../sqlcode.vue')), 'sql
 const apitest = r => require.ensure([], () => r(require('../apitest.vue')), 'apitest')
 const selenium = r => require.ensure([], () => r(require('../selenium.vue')), 'selenium')
 const mysql = r => require.ensure([], () => r(require('../mysql.vue')), 'mysql')
+
+
+
+
+
+
 const routes = [
 	
  //  {
