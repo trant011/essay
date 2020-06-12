@@ -64,6 +64,7 @@
  <div  v-else>
 	 
 	 <el-input style="width: 45rem;" v-model="item.title"  ></el-input>
+	 <br />
  <el-popconfirm
  placement="bottom-end"
    confirmButtonText='提交'
