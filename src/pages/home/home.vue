@@ -33,6 +33,11 @@
 								<i class='el-icon-arrow-down'></i>
 								<span>vue</span>
 								</el-menu-item>
+								
+								<el-menu-item index="/python" style="padding-left: 20%;">
+									<i class='el-icon-arrow-down'></i>
+									<span>python</span>
+									</el-menu-item>
 							<el-menu-item index="/menu3" style="padding-left: 20%;">
 								<i class="el-icon-data-analysis"></i>
 								<span>构造数据</span>

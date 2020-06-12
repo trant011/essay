@@ -11,6 +11,7 @@ import VueRouter from 'vue-router'
 // import sqlcode from '../sqlcode.vue'
 // import apitest from '../apitest.vue'
 // import selenium from '../selenium.vue'
+import python from '../python.vue'
 import axios from 'axios'
 import { codemirror } from 'vue-codemirror'
 import 'codemirror/lib/codemirror.css'
@@ -97,6 +98,11 @@ const routes = [
     path: '/mysql',
     name: 'mysql',
     component: mysql
+  },
+  {
+    path: '/python',
+    name: 'python',
+    component: python
   },
   // {
   //   path: '/about',
