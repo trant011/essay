@@ -56,7 +56,7 @@
 								<!-- <el-input style="width: 45rem;" v-model="item.title"  ></el-input> -->
 								<el-input style="width: 45rem;" type="textarea" placeholder="请输入内容" v-model="item.data" maxlength="300"
 								 show-word-limit :autosize="{ minRows: 2, maxRows: 10}" slot="reference" @blur="submit(item,index)"
-								autofocus=true>
+								v-focus>
 								</el-input>
 
 							</el-popconfirm>
@@ -91,6 +91,17 @@
 				},
 			}
 		},
+		
+		directives: {
+		  // 注册一个局部的自定义指令 v-focus
+		  focus: {
+		    // 指令的定义
+		    inserted: function (el) {
+		      // 聚焦元素
+		      el.querySelector('textarea').focus()
+		    }
+		  }
+		},
 		created() {
 			this.$nextTick(() => {
 				this.flag = [];
@@ -103,7 +114,7 @@
 
 	
 			edit(index) {
-				console.log("edit" + index);
+				// console.log("edit" + index);
 
 				this.$set(this.flag, index, false);
 			
