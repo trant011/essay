@@ -12,8 +12,7 @@
 		<el-container style='height:50rem;'>
 
 			<el-aside style="background-color: rgb(238, 241, 246);  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);width: 11%;">
-				<el-menu class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" default-active='menu1'
-				 :default-active="this.$route.path" router>
+				<el-menu class="el-menu-vertical-demo" :default-active="this.$route.path" router>
 					<el-submenu index="1">
 
 						<template slot="title">

@@ -58,6 +58,11 @@
 	
 }</p>
 <p style="line-height:23px;padding-right: 0.625rem;font-size: 0.875rem;color: #606266;"> 然后通过src/pages/index/index.js文件引入router的js文件配置router</p>
+<div class="el-divider el-divider--horizontal"></div>
+<p style="color: rgb(144, 147, 153); font-weight: bold;">父子组件传递：props、$ref、$emit</p>
+<p v-for= "txt in chld" style="line-height:23px;padding-right: 0.625rem;font-size: 0.875rem;color: #606266;">
+	{{txt}}
+</p>
 
 	</div>
 
@@ -83,8 +88,10 @@
 
         },{
         	date:'5.通过 vue ui创建、管理、添加组件和项目',
-        }]
+        }],
+		chld: ["<!-- 父组件 -->",' <child v-bind:message="msg"  ref="msg1"  @getMsg="showMsg()"></child>',"import Child from '../components/child.vue'","components: {Child},"," msg: '我是子组件！'","this.$refs.msg1.getMessage('我是子组件一！')","<!-- 子组件 -->"," <h3>{{message}}</h3>"," props: ['message']...methods:..getMessage(m)..."," this.$emit('getMsg', '我是父组件！')"],
       }
+	  
     }
   }
 </script>
