@@ -89,7 +89,12 @@
         },{
         	date:'5.通过 vue ui创建、管理、添加组件和项目',
         }],
-		chld: ["<!-- 父组件 -->",' <child v-bind:message="msg"  ref="msg1"  @getMsg="showMsg()"></child>',"import Child from '../components/child.vue'","components: {Child},"," msg: '我是子组件！'","this.$refs.msg1.getMessage('我是子组件一！')","<!-- 子组件 -->"," <h3>{{message}}</h3>"," props: ['message']...methods:..getMessage(m)..."," this.$emit('getMsg', '我是父组件！')"],
+		chld: ["<!-- 父组件 -->",' <child v-bind:message="msg"  ref="msg1"  @getMsg="showMsg()"></child>',
+		"import Child from '../components/child.vue'","components: {Child},"," msg: '我是子组件！'","this.$refs.msg1.getMessage('我是子组件一！')","<!-- 子组件 -->"," <h3>{{message}}</h3>"," props: ['message']...methods:..getMessage(m)...",
+		" this.$emit('getMsg', '我是父组件！')",
+		"<!-- $set ,$nextTick-->",
+		"this.$set(this.obj,key,value)",
+		"$nextTick监听到DOM更新后，调用回调函数"],
       }
 	  
     }

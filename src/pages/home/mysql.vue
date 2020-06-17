@@ -138,14 +138,21 @@ created () {
 		let param ={"page":"mysql","pid":item.pid,"data":item.data,"title":item.title};
 		axios.post('http://'+window.location.host.replace(":8079","")+":8002/updatapage/", param,{ withCredentials:true}).then(res => {
 		console.log(res.data);
-		
+		if(res.data['code'] ==1){
+			this.$message.error('没有权限');
+		}
 		      })
 	},
 	deltitle(item,index){
 		let param ={"page":"mysql","pid":item.pid,"data":item.data,"title":item.title};
 		axios.post('http://'+window.location.host.replace(":8079","")+":8002/del/", param,{ withCredentials:true}).then(res => {
 		console.log(res.data);
-		this.steps.splice(index,1);
+		if(res.data['code'] ==1){
+			this.$message.error('没有权限');
+		}else{
+			this.steps.splice(index,1);
+		}
+		
 		 })
 	},
 	addtitle(){
@@ -153,9 +160,16 @@ created () {
 		axios.post('http://'+window.location.host.replace(":8079","")+":8002/addpage/", param,{ withCredentials:true}).then(res => {
 		let data = res.data
 		console.log(data);
-		this.steps.push(data.data);
+		if(res.data['code'] ==1){
+			this.$message.error('没有权限');
+		}
+		else{
+			this.steps.push(data.data);
+			this.maxindex = this.maxindex+1;
+		}
+		
 		this.dialogFormVisible = false
-		this.maxindex = this.maxindex+1;
+		
 		      })
 		
 	},

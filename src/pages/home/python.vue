@@ -143,7 +143,9 @@
 				}).then(res => {
 					console.log(res.data);
 					this.$set(this.flag, index, true);
-
+					if(res.data['code']==1){
+						this.$message.error('没有权限');
+					}
 
 				})
 			},
@@ -159,6 +161,9 @@
 				}).then(res => {
 					console.log(res.data);
 					this.steps.splice(index, 1);
+					if(res.data['code'] ==1){
+						this.$message.error('没有权限');
+					}
 				})
 			},
 
@@ -174,10 +179,16 @@
 				}).then(res => {
 					let data = res.data
 					console.log(data);
-					this.steps.push(data.data);
+					if(res.data['code']==1){
+						this.$message.error('没有权限');
+					}else{
+						this.steps.push(data.data);
+						
+						this.maxindex = this.maxindex + 1;
+					}
 					this.dialogFormVisible = false;
 					this.flag[this.maxindex] = true;
-					this.maxindex = this.maxindex + 1;
+					
 				})
 
 			},
