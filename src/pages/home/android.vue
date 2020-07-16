@@ -70,7 +70,7 @@
 			  type="textarea"
 			  placeholder="请输入内容"
 			  v-model="item.data"
-			  maxlength="300"
+			  maxlength="1000"
 			  show-word-limit
 			  :autosize="{ minRows: 2, maxRows: 10}"
 			   slot="reference">
