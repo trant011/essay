@@ -37,7 +37,10 @@
 								<i class='el-icon-arrow-down'></i>
 								<span>python</span>
 							</el-menu-item>
-
+							<el-menu-item index="/android" style="padding-left: 20%;">
+								<i class='el-icon-arrow-down'></i>
+								<span>android</span>
+							</el-menu-item>
 							<el-menu-item index="/eleui" style="padding-left: 20%;">
 								<i class="el-icon-eleme"></i>
 								<span>ele-ui</span>

@@ -10,7 +10,7 @@ import VueRouter from 'vue-router'
 // import jenkins from '../jenkins.vue'
 // import sqlcode from '../sqlcode.vue'
 // import apitest from '../apitest.vue'
-// import selenium from '../selenium.vue'
+import android from '../android.vue'
 import python from '../python.vue'
 import axios from 'axios'
 import { codemirror } from 'vue-codemirror'
@@ -109,6 +109,11 @@ const routes = [
     path: '/python',
     name: 'python',
     component: python
+  },
+  {
+    path: '/android',
+    name: 'android',
+    component: android
   },
   // {
   //   path: '/about',
