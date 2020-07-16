@@ -36,7 +36,7 @@
 	    <el-form-item label="文本" :label-width="formLabelWidth" >
 	  <el-input v-model="form.text" autocomplete="off"  style="width: 90%;"
 	  type="textarea" 
-	  maxlength="300"
+	  maxlength="1000"
 		show-word-limit
 		:autosize="{ minRows: 2, maxRows: 10}"></el-input>
 	  
